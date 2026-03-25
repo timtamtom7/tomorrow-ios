@@ -6,6 +6,7 @@ struct LibraryView: View {
     @Environment(LibraryViewModel.self) private var viewModel
     @State private var showingEditor = false
     @State private var selectedLetter: Letter?
+    @State private var showingTemplatePicker = false
 
     var body: some View {
         NavigationStack {
@@ -33,9 +34,24 @@ struct LibraryView: View {
                             .foregroundStyle(Color.tomorrowPrimary)
                     }
                 }
+                ToolbarItem(placement: .topBarLeading) {
+                    Button {
+                        showingTemplatePicker = true
+                    } label: {
+                        Image(systemName: "doc.text.fill")
+                            .font(.body)
+                    }
+                    .tint(Color.tomorrowTextSecondary)
+                }
             }
             .sheet(isPresented: $showingEditor) {
                 LetterEditorView(letter: selectedLetter)
+            }
+            .sheet(isPresented: $showingTemplatePicker) {
+                TemplatePickerSheet { template in
+                    selectedLetter = nil
+                    showingEditor = true
+                }
             }
         }
     }
