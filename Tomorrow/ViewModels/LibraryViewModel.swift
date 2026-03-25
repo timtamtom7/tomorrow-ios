@@ -75,13 +75,13 @@ final class LibraryViewModel {
     }
     
     private func checkAndDeliverLetters() {
+        // R6: Collect letters ready for delivery first, then update (avoid mutation during iteration)
         let now = Date()
-        for letter in letters {
-            if letter.status == .scheduled && letter.scheduledDate <= now {
-                var updated = letter
-                updated.status = .delivered
-                db.saveLetter(updated)
-            }
+        let toDeliver = letters.filter { $0.status == .scheduled && $0.scheduledDate <= now }
+        for var letter in toDeliver {
+            letter.status = .delivered
+            db.saveLetter(letter)
+            letterService.scheduleLetterDeliveryNotification(for: letter)
         }
     }
     

@@ -301,3 +301,54 @@ struct FamilyTree: Codable {
 - Audio/video letters
 - Tags and filtering (R4)
 - Light mode (dark only for R1)
+
+---
+
+## R5 — Platform, Notifications & Delivery
+
+### Notification System
+- Local push notifications for letter delivery (UNUserNotificationCenter)
+- Notification scheduled at exact delivery datetime
+- "A letter from your past" push when letter unlocks
+- Weekly write reminder notification (Sunday 10am)
+- Notification permission requested on first letter schedule
+
+### Letter Delivery
+- Letters auto-delivered when app opens and scheduledDate >= now
+- Delivery notification fired at exact time (even if app closed)
+- Delivery status: draft → scheduled → delivered
+- Cancel scheduled notification if letter moved back to draft
+
+### Recipient Management
+- Pre-built recipient templates (Future Self, Child, Partner)
+- Custom recipient with name, relationship, email
+- Letter linked to specific recipient
+
+### Template System
+- 5 pre-built letter templates with prompts
+- Template selection in editor
+- Suggested duration per template (1yr, 5yr, 18yr)
+- Custom template support
+
+---
+
+## R6 — Polish, Stability & Edge Cases
+
+### Stability
+- Fix checkAndDeliverLetters: collect updates before mutating (avoids array mutation during iteration bug)
+- All DatabaseService operations handle errors gracefully
+- Notification scheduling guards against past dates
+
+### Edge Cases
+- Empty library → meaningful illustrated empty state with CTA
+- Draft-only library → skip empty sections, show only drafts
+- All letters scheduled in future → no delivered section
+- Past date scheduled → treat as delivered immediately
+- Long letter titles → truncated with ellipsis in cards
+
+### UI Polish
+- Consistent warm amber color tokens throughout
+- SF Symbols exclusively for iconography
+- iPad sidebar with family tree navigation
+- iPhone tab bar with centered create button
+- Family tree visualization with expandable nodes
