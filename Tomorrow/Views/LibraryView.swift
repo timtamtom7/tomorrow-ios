@@ -1,0 +1,120 @@
+import SwiftUI
+
+// MARK: - LibraryView
+
+struct LibraryView: View {
+    @Environment(LibraryViewModel.self) private var viewModel
+    @State private var showingEditor = false
+    @State private var selectedLetter: Letter?
+
+    var body: some View {
+        NavigationStack {
+            ZStack {
+                Color.tomorrowBackground.ignoresSafeArea()
+
+                if viewModel.isLoading {
+                    LoadingView()
+                } else if viewModel.isEmpty {
+                    emptyState
+                } else {
+                    libraryContent
+                }
+            }
+            .navigationTitle("Library")
+            .navigationBarTitleDisplayMode(.large)
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
+                        selectedLetter = nil
+                        showingEditor = true
+                    } label: {
+                        Image(systemName: "plus.circle.fill")
+                            .font(.title2)
+                            .foregroundStyle(Color.tomorrowPrimary)
+                    }
+                }
+            }
+            .sheet(isPresented: $showingEditor) {
+                LetterEditorView(letter: selectedLetter)
+            }
+        }
+    }
+
+    private var emptyState: some View {
+        EmptyStateView(
+            icon: "doc.text",
+            title: "No Letters Yet",
+            message: "Write your first letter to future-you. What do you want to remember?",
+            actionTitle: "Write a Letter"
+        ) {
+            selectedLetter = nil
+            showingEditor = true
+        }
+    }
+
+    private var libraryContent: some View {
+        ScrollView {
+            VStack(spacing: 32) {
+                // Scheduled section
+                if !viewModel.scheduledLetters.isEmpty {
+                    LetterListView(
+                        title: "Scheduled",
+                        letters: viewModel.scheduledLetters,
+                        emptyIcon: "clock",
+                        emptyTitle: "No Scheduled Letters",
+                        emptyMessage: "Schedule a letter to send to future-you",
+                        onLetterTap: { letter in
+                            selectedLetter = letter
+                            showingEditor = true
+                        },
+                        onLetterDelete: { letter in
+                            viewModel.deleteLetter(id: letter.id)
+                        }
+                    )
+                }
+
+                // Delivered section
+                if !viewModel.deliveredLetters.isEmpty {
+                    LetterListView(
+                        title: "Delivered",
+                        letters: viewModel.deliveredLetters,
+                        emptyIcon: "seal",
+                        emptyTitle: "No Delivered Letters",
+                        emptyMessage: "Your letters will appear here when delivered",
+                        onLetterTap: { letter in
+                            selectedLetter = letter
+                            showingEditor = true
+                        },
+                        onLetterDelete: { letter in
+                            viewModel.deleteLetter(id: letter.id)
+                        }
+                    )
+                }
+
+                // Drafts section
+                if !viewModel.drafts.isEmpty {
+                    LetterListView(
+                        title: "Drafts",
+                        letters: viewModel.drafts,
+                        emptyIcon: "pencil",
+                        emptyTitle: "No Drafts",
+                        emptyMessage: "Your drafts will appear here",
+                        onLetterTap: { letter in
+                            selectedLetter = letter
+                            showingEditor = true
+                        },
+                        onLetterDelete: { letter in
+                            viewModel.deleteLetter(id: letter.id)
+                        }
+                    )
+                }
+            }
+            .padding(.vertical, 16)
+        }
+    }
+}
+
+#Preview {
+    LibraryView()
+        .environment(LibraryViewModel())
+}
