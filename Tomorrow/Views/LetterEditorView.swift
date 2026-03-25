@@ -6,13 +6,14 @@ struct LetterEditorView: View {
     @Environment(\.dismiss) private var dismiss
     @Environment(LibraryViewModel.self) private var viewModel
 
-    @State private var title: String = ""
-    @State private var content: String = ""
+    @State private var letter: Letter
     @State private var scheduledDate: Date = Calendar.current.date(byAdding: .day, value: 7, to: Date()) ?? Date()
     @State private var isScheduled = false
     @State private var showingDatePicker = false
     @State private var showingPrompt = false
     @State private var lastPauseTime: Date?
+    @State private var showingAttachments = false
+    @State private var showingMemoryTags = false
 
     private let promptTimer = Timer.publish(every: 10, on: .main, in: .common).autoconnect()
 
@@ -27,6 +28,14 @@ struct LetterEditorView: View {
         "What does your future self need to hear?"
     ]
 
+    init(letter: Letter?) {
+        _letter = State(initialValue: letter ?? Letter())
+        _isScheduled = State(initialValue: (letter?.status ?? .draft) != .draft)
+        if let l = letter {
+            _scheduledDate = State(initialValue: l.scheduledDate)
+        }
+    }
+
     var body: some View {
         NavigationStack {
             ZStack {
@@ -36,6 +45,8 @@ struct LetterEditorView: View {
                     VStack(spacing: 24) {
                         titleSection
                         contentSection
+                        attachmentsSection
+                        memoryTagsSection
                         scheduleSection
                         characterCount
 
@@ -64,20 +75,17 @@ struct LetterEditorView: View {
             .onReceive(promptTimer) { _ in
                 checkForPrompt()
             }
-            .onChange(of: content) { _, _ in
+            .onChange(of: letter.content) { _, _ in
                 resetPauseTimer()
                 if showingPrompt {
                     showingPrompt = false
                 }
             }
-            .onAppear {
-                loadLetterIfEditing()
-            }
         }
     }
 
     private var isEditing: Bool {
-        existingLetter != nil
+        viewModel.letters.contains { $0.id == letter.id }
     }
 
     private var existingLetter: Letter?
@@ -94,7 +102,7 @@ struct LetterEditorView: View {
                 .font(.caption)
                 Color.tomorrowTextSecondary
 
-            TextField("Give your letter a title...", text: $title)
+            TextField("Give your letter a title...", text: $letter.title)
                 .font(.body)
                 Color.tomorrowTextPrimary
                 .padding(12)
@@ -114,7 +122,7 @@ struct LetterEditorView: View {
                 Color.tomorrowTextSecondary
 
             ZStack(alignment: .topLeading) {
-                if content.isEmpty {
+                if letter.content.isEmpty {
                     Text("Dear future me,\n\nWrite what's on your heart...")
                         .font(.body)
                         Color.tomorrowTextTertiary
@@ -122,7 +130,7 @@ struct LetterEditorView: View {
                         .padding(.leading, 4)
                 }
 
-                TextEditor(text: $content)
+                TextEditor(text: $letter.content)
                     .font(.body)
                     Color.tomorrowTextPrimary
                     .scrollContentBackground(.hidden)
@@ -135,6 +143,68 @@ struct LetterEditorView: View {
                 RoundedRectangle(cornerRadius: 8)
                     .stroke(Color.tomorrowDivider, lineWidth: 1)
             )
+        }
+    }
+    
+    private var attachmentsSection: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            HStack {
+                Text("Attachments")
+                    .font(.caption)
+                    Color.tomorrowTextSecondary
+                
+                Spacer()
+                
+                Button {
+                    showingAttachments = true
+                } label: {
+                    Image(systemName: "plus.circle")
+                        .foregroundColor(.tomorrowPrimary)
+                }
+            }
+            
+            // Voice recordings
+            VoiceRecorderView(letter: $letter)
+        }
+    }
+    
+    private var memoryTagsSection: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            HStack {
+                Text("Memory Tags")
+                    .font(.caption)
+                    Color.tomorrowTextSecondary
+                
+                Spacer()
+                
+                Button {
+                    showingMemoryTags = true
+                } label: {
+                    Image(systemName: "plus.circle")
+                        .foregroundColor(.tomorrowPrimary)
+                }
+            }
+            
+            MemoryTagsPickerView(letter: $letter)
+        }
+        .sheet(isPresented: $showingMemoryTags) {
+            NavigationStack {
+                ZStack {
+                    Color.tomorrowBackground.ignoresSafeArea()
+                    MemoryTagsPickerView(letter: $letter)
+                        .padding()
+                }
+                .navigationTitle("Memory Tags")
+                .navigationBarTitleDisplayMode(.inline)
+                .toolbar {
+                    ToolbarItem(placement: .topBarTrailing) {
+                        Button("Done") {
+                            showingMemoryTags = false
+                        }
+                        .foregroundColor(.tomorrowPrimary)
+                    }
+                }
+            }
         }
     }
 
@@ -177,7 +247,7 @@ struct LetterEditorView: View {
     private var characterCount: some View {
         HStack {
             Spacer()
-            Text("\(content.count) characters")
+            Text("\(letter.content.count) characters")
                 .font(.caption)
                 Color.tomorrowTextTertiary
         }
@@ -242,7 +312,7 @@ struct LetterEditorView: View {
     }
 
     private var canSave: Bool {
-        !content.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
+        !letter.content.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
     }
 
     private var formattedDate: String {
@@ -254,7 +324,7 @@ struct LetterEditorView: View {
     // MARK: - Actions
 
     private func checkForPrompt() {
-        guard content.isEmpty || content.count < 20 else { return }
+        guard letter.content.isEmpty || letter.content.count < 20 else { return }
         guard let lastPause = lastPauseTime else { return }
 
         if Date().timeIntervalSince(lastPause) >= 10 {
@@ -270,34 +340,24 @@ struct LetterEditorView: View {
 
     private func saveLetter() {
         let status: LetterStatus = isScheduled ? .scheduled : .draft
+        var updatedLetter = letter
+        updatedLetter.scheduledDate = scheduledDate
+        updatedLetter.status = status
 
-        if let existing = existingLetter {
-            var updated = existing
-            updated.title = title
-            updated.content = content
-            updated.scheduledDate = scheduledDate
-            updated.status = status
-            viewModel.updateLetter(updated)
+        if isEditing {
+            viewModel.updateLetter(updatedLetter)
         } else {
             viewModel.createLetter(
-                title: title,
-                content: content,
-                scheduledDate: scheduledDate,
-                status: status
+                title: updatedLetter.title,
+                content: updatedLetter.content,
+                scheduledDate: updatedLetter.scheduledDate,
+                status: updatedLetter.status,
+                tags: updatedLetter.tags,
+                recipientId: updatedLetter.recipientId
             )
         }
 
         dismiss()
-    }
-}
-
-// Extension for LetterEditorView to accept optional letter
-extension LetterEditorView {
-    init(letter: Letter?) {
-        _title = State(initialValue: letter?.title ?? "")
-        _content = State(initialValue: letter?.content ?? "")
-        _scheduledDate = State(initialValue: letter?.scheduledDate ?? Calendar.current.date(byAdding: .day, value: 7, to: Date()) ?? Date())
-        _isScheduled = State(initialValue: letter?.status != .draft)
     }
 }
 

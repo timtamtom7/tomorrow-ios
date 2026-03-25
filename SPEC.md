@@ -352,3 +352,75 @@ struct FamilyTree: Codable {
 - iPad sidebar with family tree navigation
 - iPhone tab bar with centered create button
 - Family tree visualization with expandable nodes
+
+## R7 — Voice Letters, Memory Tags & Rich Content
+
+### Voice Letter Recording
+- Record audio messages as letter attachments
+- VoiceRecorderService: AVAudioRecorder-based recording with waveform visualization
+- VoiceRecorderView: record, pause, resume, cancel with live waveform
+- Audio attachments stored in Documents/VoiceRecordings/
+- Playback with waveform display in letter detail
+- Multiple voice messages per letter
+
+### Memory Tags
+- Tag letters with life moments: Wedding, Birth, New Home, Graduation, etc.
+- MemoryTagsPickerView: category-based tag browser with custom tag creation
+- Tags stored with letters (emoji, name, category with color coding)
+- Filter library by memory tags
+- 13 default tags across 10 categories
+
+### Photo Attachments (Foundation)
+- PhotoAttachment model ready for future camera roll integration
+- Storage path structure in Documents/PhotoAttachments/
+
+### Rich Content
+- AudioAttachment and PhotoAttachment fields added to Letter model
+- Letter editor now shows voice recorder and memory tag sections
+- Character count in editor
+
+## R8 — AI Writing Assistance & Integrations
+
+### AI Writing Coach
+- On-device NLP analysis of letter content for tone/mood detection
+- Writing prompt suggestions based on content themes
+- "Expand this thought" suggestions using NaturalLanguage
+
+### Integration Framework
+- ExportService for exporting letters to external platforms
+- Readwise integration for preserving letter insights
+- PDF export of letters for archival
+
+### Recipient Profiles
+- Enhanced recipient profiles with avatar, relationship, email
+- Letter count per recipient
+- Suggested templates per recipient type
+
+## R9 — Community & Subscriptions
+
+### Subscription Tiers
+- Free: 3 letters/month, basic templates
+- Premium ($4.99/mo): unlimited letters, voice recording, memory tags, AI
+- Legacy ($9.99/mo): Premium + PDF export, priority support
+
+### Community Features
+- "Letter to the Future" shared letters (opt-in, anonymized)
+- Community insights: themes people write about most
+- Achievement badges: First Letter, Consistent Writer, 1-Year Vault
+
+## R10 — Launch, Marketing, Platform
+
+### App Store
+- Full App Store listing with screenshots
+- Feature video highlighting time-capsule concept
+- Privacy policy and parental guidance
+
+### Marketing
+- Tomorrow.app marketing site
+- SEO optimization for "letter to future self" and related terms
+- Blog: why write to your future self
+
+### Platform Expansion
+- iPad optimized (already done)
+- watchOS companion for delivery notifications
+- Android app (Flutter cross-platform)
