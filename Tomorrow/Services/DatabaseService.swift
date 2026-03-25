@@ -8,6 +8,7 @@ final class DatabaseService {
 
     private let lettersKey = "tomorrow_letters"
     private let familyTreeKey = "tomorrow_family_tree"
+    private let recipientsKey = "tomorrow_recipients"
 
     private init() {}
 
@@ -83,5 +84,47 @@ final class DatabaseService {
     func clearAll() {
         UserDefaults.standard.removeObject(forKey: lettersKey)
         UserDefaults.standard.removeObject(forKey: familyTreeKey)
+        UserDefaults.standard.removeObject(forKey: recipientsKey)
+    }
+}
+
+// MARK: - Recipients
+
+extension DatabaseService {
+    func saveRecipient(_ recipient: Recipient) {
+        var recipients = loadRecipients()
+        if let index = recipients.firstIndex(where: { $0.id == recipient.id }) {
+            recipients[index] = recipient
+        } else {
+            recipients.append(recipient)
+        }
+        saveRecipients(recipients)
+    }
+    
+    func saveRecipients(_ recipients: [Recipient]) {
+        do {
+            let data = try JSONEncoder().encode(recipients)
+            UserDefaults.standard.set(data, forKey: recipientsKey)
+        } catch {
+            print("Failed to save recipients: \(error)")
+        }
+    }
+    
+    func loadRecipients() -> [Recipient] {
+        guard let data = UserDefaults.standard.data(forKey: recipientsKey) else {
+            return []
+        }
+        do {
+            return try JSONDecoder().decode([Recipient].self, from: data)
+        } catch {
+            print("Failed to load recipients: \(error)")
+            return []
+        }
+    }
+    
+    func deleteRecipient(id: UUID) {
+        var recipients = loadRecipients()
+        recipients.removeAll { $0.id == id }
+        saveRecipients(recipients)
     }
 }
