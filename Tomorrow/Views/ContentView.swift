@@ -52,6 +52,12 @@ struct ContentView: View {
                         Label("Settings", systemImage: "gear")
                     }
                     .tag(3)
+                
+                FamilyArchiveView()
+                    .tabItem {
+                        Label("Legacy", systemImage: "heart.fill")
+                    }
+                    .tag(5)
             }
             .tint(Color.tomorrowPrimary)
         }
@@ -80,6 +86,10 @@ struct ContentView: View {
                     Label("Family Tree", systemImage: "tree")
                         .onTapGesture { selectedTab = 4 }
                         .listRowBackground(selectedTab == 4 ? Color.tomorrowPrimary.opacity(0.15) : Color.clear)
+                    
+                    Label("Legacy", systemImage: "heart.fill")
+                        .onTapGesture { selectedTab = 5 }
+                        .listRowBackground(selectedTab == 5 ? Color.tomorrowPrimary.opacity(0.15) : Color.clear)
                 }
                 
                 Section {
@@ -102,6 +112,8 @@ struct ContentView: View {
                 SettingsView()
             case 4:
                 FamilyTreeView()
+            case 5:
+                FamilyArchiveView()
             default:
                 LibraryView()
             }

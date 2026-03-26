@@ -63,6 +63,24 @@ extension Color {
     }
 }
 
+// MARK: - ShapeStyle Extensions
+
+extension ShapeStyle where Self == Color {
+    static var tomorrowPrimary: Color { Color.tomorrowPrimary }
+    static var tomorrowSecondary: Color { Color.tomorrowSecondary }
+    static var tomorrowAccent: Color { Color.tomorrowAccent }
+    static var tomorrowBackground: Color { Color.tomorrowBackground }
+    static var tomorrowSurface: Color { Color.tomorrowSurface }
+    static var tomorrowSurfaceElevated: Color { Color.tomorrowSurfaceElevated }
+    static var tomorrowTextPrimary: Color { Color.tomorrowTextPrimary }
+    static var tomorrowTextSecondary: Color { Color.tomorrowTextSecondary }
+    static var tomorrowTextTertiary: Color { Color.tomorrowTextTertiary }
+    static var tomorrowDivider: Color { Color.tomorrowDivider }
+    static var tomorrowError: Color { Color.tomorrowError }
+    static var tomorrowSuccess: Color { Color.tomorrowSuccess }
+    static var tomorrowGlow: Color { Color.tomorrowGlow }
+}
+
 // MARK: - Font Extensions
 
 extension Font {
