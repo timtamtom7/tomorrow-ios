@@ -1,0 +1,219 @@
+{
+  "" : {
+    "diagnostics" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/Tomorrow-primary.dia",
+    "emit-module-dependencies" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/Tomorrow-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/Tomorrow-primary-emit-module.dia",
+    "pch" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/Tomorrow-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/Tomorrow-primary.swiftdeps"
+  },
+  "/Users/mauriello/Dev/tomorrow-ios/Tomorrow/App/App.swift" : {
+    "const-values" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/App.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/App.d",
+    "diagnostics" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/App.dia",
+    "index-unit-output-path" : "/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/App.o",
+    "llvm-bc" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/App.bc",
+    "object" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/App.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/App.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/App~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/tomorrow-ios/Tomorrow/Models/FamilyTree.swift" : {
+    "const-values" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/FamilyTree.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/FamilyTree.d",
+    "diagnostics" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/FamilyTree.dia",
+    "index-unit-output-path" : "/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/FamilyTree.o",
+    "llvm-bc" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/FamilyTree.bc",
+    "object" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/FamilyTree.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/FamilyTree.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/FamilyTree~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/tomorrow-ios/Tomorrow/Models/Letter.swift" : {
+    "const-values" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/Letter.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/Letter.d",
+    "diagnostics" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/Letter.dia",
+    "index-unit-output-path" : "/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/Letter.o",
+    "llvm-bc" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/Letter.bc",
+    "object" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/Letter.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/Letter.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/Letter~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/tomorrow-ios/Tomorrow/Services/DatabaseService.swift" : {
+    "const-values" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/DatabaseService.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/DatabaseService.d",
+    "diagnostics" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/DatabaseService.dia",
+    "index-unit-output-path" : "/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/DatabaseService.o",
+    "llvm-bc" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/DatabaseService.bc",
+    "object" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/DatabaseService.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/DatabaseService.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/DatabaseService~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/tomorrow-ios/Tomorrow/Services/LetterService.swift" : {
+    "const-values" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/LetterService.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/LetterService.d",
+    "diagnostics" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/LetterService.dia",
+    "index-unit-output-path" : "/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/LetterService.o",
+    "llvm-bc" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/LetterService.bc",
+    "object" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/LetterService.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/LetterService.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/LetterService~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/tomorrow-ios/Tomorrow/Services/TomorrowR11Service.swift" : {
+    "const-values" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/TomorrowR11Service.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/TomorrowR11Service.d",
+    "diagnostics" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/TomorrowR11Service.dia",
+    "index-unit-output-path" : "/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/TomorrowR11Service.o",
+    "llvm-bc" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/TomorrowR11Service.bc",
+    "object" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/TomorrowR11Service.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/TomorrowR11Service.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/TomorrowR11Service~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/tomorrow-ios/Tomorrow/Services/TomorrowR12Service.swift" : {
+    "const-values" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/TomorrowR12Service.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/TomorrowR12Service.d",
+    "diagnostics" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/TomorrowR12Service.dia",
+    "index-unit-output-path" : "/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/TomorrowR12Service.o",
+    "llvm-bc" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/TomorrowR12Service.bc",
+    "object" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/TomorrowR12Service.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/TomorrowR12Service.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/TomorrowR12Service~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/tomorrow-ios/Tomorrow/Services/VoiceRecorderService.swift" : {
+    "const-values" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/VoiceRecorderService.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/VoiceRecorderService.d",
+    "diagnostics" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/VoiceRecorderService.dia",
+    "index-unit-output-path" : "/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/VoiceRecorderService.o",
+    "llvm-bc" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/VoiceRecorderService.bc",
+    "object" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/VoiceRecorderService.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/VoiceRecorderService.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/VoiceRecorderService~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/tomorrow-ios/Tomorrow/ViewModels/LibraryViewModel.swift" : {
+    "const-values" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/LibraryViewModel.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/LibraryViewModel.d",
+    "diagnostics" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/LibraryViewModel.dia",
+    "index-unit-output-path" : "/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/LibraryViewModel.o",
+    "llvm-bc" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/LibraryViewModel.bc",
+    "object" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/LibraryViewModel.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/LibraryViewModel.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/LibraryViewModel~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/tomorrow-ios/Tomorrow/Views/Components/EmptyStateView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/EmptyStateView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/EmptyStateView.d",
+    "diagnostics" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/EmptyStateView.dia",
+    "index-unit-output-path" : "/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/EmptyStateView.o",
+    "llvm-bc" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/EmptyStateView.bc",
+    "object" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/EmptyStateView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/EmptyStateView.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/EmptyStateView~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/tomorrow-ios/Tomorrow/Views/ContentView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/ContentView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/ContentView.d",
+    "diagnostics" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/ContentView.dia",
+    "index-unit-output-path" : "/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/ContentView.o",
+    "llvm-bc" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/ContentView.bc",
+    "object" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/ContentView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/ContentView.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/ContentView~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/tomorrow-ios/Tomorrow/Views/FamilyArchiveView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/FamilyArchiveView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/FamilyArchiveView.d",
+    "diagnostics" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/FamilyArchiveView.dia",
+    "index-unit-output-path" : "/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/FamilyArchiveView.o",
+    "llvm-bc" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/FamilyArchiveView.bc",
+    "object" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/FamilyArchiveView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/FamilyArchiveView.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/FamilyArchiveView~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/tomorrow-ios/Tomorrow/Views/LetterEditorView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/LetterEditorView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/LetterEditorView.d",
+    "diagnostics" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/LetterEditorView.dia",
+    "index-unit-output-path" : "/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/LetterEditorView.o",
+    "llvm-bc" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/LetterEditorView.bc",
+    "object" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/LetterEditorView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/LetterEditorView.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/LetterEditorView~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/tomorrow-ios/Tomorrow/Views/LetterListView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/LetterListView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/LetterListView.d",
+    "diagnostics" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/LetterListView.dia",
+    "index-unit-output-path" : "/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/LetterListView.o",
+    "llvm-bc" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/LetterListView.bc",
+    "object" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/LetterListView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/LetterListView.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/LetterListView~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/tomorrow-ios/Tomorrow/Views/LibraryView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/LibraryView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/LibraryView.d",
+    "diagnostics" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/LibraryView.dia",
+    "index-unit-output-path" : "/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/LibraryView.o",
+    "llvm-bc" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/LibraryView.bc",
+    "object" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/LibraryView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/LibraryView.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/LibraryView~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/tomorrow-ios/Tomorrow/Views/MemoryTagsPickerView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/MemoryTagsPickerView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/MemoryTagsPickerView.d",
+    "diagnostics" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/MemoryTagsPickerView.dia",
+    "index-unit-output-path" : "/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/MemoryTagsPickerView.o",
+    "llvm-bc" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/MemoryTagsPickerView.bc",
+    "object" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/MemoryTagsPickerView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/MemoryTagsPickerView.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/MemoryTagsPickerView~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/tomorrow-ios/Tomorrow/Views/SettingsView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/SettingsView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/SettingsView.d",
+    "diagnostics" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/SettingsView.dia",
+    "index-unit-output-path" : "/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/SettingsView.o",
+    "llvm-bc" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/SettingsView.bc",
+    "object" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/SettingsView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/SettingsView.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/SettingsView~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/tomorrow-ios/Tomorrow/Views/TemplatePickerSheet.swift" : {
+    "const-values" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/TemplatePickerSheet.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/TemplatePickerSheet.d",
+    "diagnostics" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/TemplatePickerSheet.dia",
+    "index-unit-output-path" : "/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/TemplatePickerSheet.o",
+    "llvm-bc" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/TemplatePickerSheet.bc",
+    "object" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/TemplatePickerSheet.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/TemplatePickerSheet.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/TemplatePickerSheet~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/tomorrow-ios/Tomorrow/Views/TimelineView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/TimelineView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/TimelineView.d",
+    "diagnostics" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/TimelineView.dia",
+    "index-unit-output-path" : "/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/TimelineView.o",
+    "llvm-bc" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/TimelineView.bc",
+    "object" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/TimelineView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/TimelineView.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/TimelineView~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/tomorrow-ios/Tomorrow/Views/VoiceRecorderView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/VoiceRecorderView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/VoiceRecorderView.d",
+    "diagnostics" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/VoiceRecorderView.dia",
+    "index-unit-output-path" : "/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/VoiceRecorderView.o",
+    "llvm-bc" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/VoiceRecorderView.bc",
+    "object" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/VoiceRecorderView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/VoiceRecorderView.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/VoiceRecorderView~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "const-values" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/GeneratedAssetSymbols.d",
+    "diagnostics" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/GeneratedAssetSymbols.dia",
+    "index-unit-output-path" : "/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "llvm-bc" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/GeneratedAssetSymbols.bc",
+    "object" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/GeneratedAssetSymbols~partial.swiftmodule"
+  }
+}

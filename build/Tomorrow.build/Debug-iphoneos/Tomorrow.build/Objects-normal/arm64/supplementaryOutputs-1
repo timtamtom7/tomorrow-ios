@@ -1,0 +1,23 @@
+{
+  "/Users/mauriello/Dev/tomorrow-ios/Tomorrow/App/App.swift" : {
+    "const-values" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/App.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/App.d",
+    "diagnostics" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/App.dia",
+    "object" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/App.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/App.swiftdeps"
+  },
+  "/Users/mauriello/Dev/tomorrow-ios/Tomorrow/Services/DatabaseService.swift" : {
+    "const-values" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/DatabaseService.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/DatabaseService.d",
+    "diagnostics" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/DatabaseService.dia",
+    "object" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/DatabaseService.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/DatabaseService.swiftdeps"
+  },
+  "/Users/mauriello/Dev/tomorrow-ios/Tomorrow/Views/ContentView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/ContentView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/ContentView.d",
+    "diagnostics" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/ContentView.dia",
+    "object" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/ContentView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/tomorrow-ios/build/Tomorrow.build/Debug-iphoneos/Tomorrow.build/Objects-normal/arm64/ContentView.swiftdeps"
+  }
+}

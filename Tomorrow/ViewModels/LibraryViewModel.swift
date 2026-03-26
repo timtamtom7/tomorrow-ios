@@ -78,10 +78,12 @@ final class LibraryViewModel {
         // R6: Collect letters ready for delivery first, then update (avoid mutation during iteration)
         let now = Date()
         let toDeliver = letters.filter { $0.status == .scheduled && $0.scheduledDate <= now }
-        for var letter in toDeliver {
+        for i in toDeliver.indices {
+            var letter = toDeliver[i]
             letter.status = .delivered
             db.saveLetter(letter)
             letterService.scheduleLetterDeliveryNotification(for: letter)
+            toDeliver[i] = letter
         }
     }
     
