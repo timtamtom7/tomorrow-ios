@@ -30,6 +30,9 @@ struct VoiceRecorderView: View {
                 .foregroundColor(.tomorrowTextSecondary)
             
             Button {
+                Task { @MainActor in
+                    HapticsManager.shared.buttonTap()
+                }
                 showingRecorder = true
             } label: {
                 Label("Record voice message", systemImage: "mic.fill")
@@ -41,6 +44,8 @@ struct VoiceRecorderView: View {
                     .background(Color.tomorrowPrimary)
                     .clipShape(Capsule())
             }
+            .accessibilityLabel("Record voice message")
+            .accessibilityHint("Opens the voice recorder to create an audio attachment")
         }
         .padding(24)
         .frame(maxWidth: .infinity)
@@ -75,6 +80,9 @@ struct AudioPlayerRow: View {
     var body: some View {
         HStack(spacing: 12) {
             Button {
+                Task { @MainActor in
+                    HapticsManager.shared.buttonTap()
+                }
                 isPlaying.toggle()
                 if isPlaying {
                     playAudio()
@@ -86,6 +94,8 @@ struct AudioPlayerRow: View {
                     .font(.title)
                     .foregroundColor(.tomorrowPrimary)
             }
+            .accessibilityLabel(isPlaying ? "Pause playback" : "Play audio")
+            .accessibilityHint("Double tap to \(isPlaying ? "pause" : "play") this voice message")
             
             VStack(alignment: .leading, spacing: 4) {
                 Text(audio.label)
@@ -105,15 +115,20 @@ struct AudioPlayerRow: View {
             Spacer()
             
             Button {
+                Task { @MainActor in
+                    HapticsManager.shared.deleteAction()
+                }
                 onDelete()
             } label: {
                 Image(systemName: "trash")
                     .foregroundColor(.tomorrowError)
             }
+            .accessibilityLabel("Delete audio")
+            .accessibilityHint("Removes this voice message from the letter")
         }
         .padding(12)
         .background(Color.tomorrowSurfaceElevated)
-        .clipShape(RoundedRectangle(cornerRadius: 8))
+        .clipShape(RoundedRectangle(cornerRadius: Theme.CornerRadius.sm))
     }
     
     private func playAudio() {
@@ -266,6 +281,9 @@ struct RecorderSheetView: View {
             
             HStack(spacing: 32) {
                 Button {
+                    Task { @MainActor in
+                        HapticsManager.shared.recording()
+                    }
                     if isPaused {
                         VoiceRecorderService.shared.resumeRecording()
                         isPaused = false
@@ -278,8 +296,12 @@ struct RecorderSheetView: View {
                         .font(.title)
                         .foregroundColor(.tomorrowPrimary)
                 }
+                .accessibilityLabel(isPaused ? "Resume recording" : "Pause recording")
                 
                 Button {
+                    Task { @MainActor in
+                        HapticsManager.shared.deleteAction()
+                    }
                     VoiceRecorderService.shared.cancelRecording()
                     isRecording = false
                 } label: {
@@ -287,6 +309,8 @@ struct RecorderSheetView: View {
                         .font(.title)
                         .foregroundColor(.tomorrowError)
                 }
+                .accessibilityLabel("Cancel recording")
+                .accessibilityHint("Discards the current recording")
             }
             
             Text(isPaused ? "Paused" : "Recording...")

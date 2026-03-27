@@ -14,8 +14,10 @@
 		4214D3A830AF098EBB001839 /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269065F7DFE710F8041FFA04 /* LibraryView.swift */; };
 		50264EDDCA9F29AF42AA0624 /* TomorrowR12Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663EFDFD3AADECD9EF3283C4 /* TomorrowR12Service.swift */; };
 		558EED6133306B0A83E8CAF8 /* TemplatePickerSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5039F7FC1DD0CE823F41DA4 /* TemplatePickerSheet.swift */; };
+		59015D79A41144FD44A5A1DB /* HapticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3937BFBCAA8D584A15ECA6C /* HapticsManager.swift */; };
 		734F205DBE6669F5362B44EB /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = B866E491213A3EFDBE505C6E /* App.swift */; };
 		A41233C9DE23813D91C7D61C /* VoiceRecorderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731E1DFA0CD489A569D43CBA /* VoiceRecorderService.swift */; };
+		A595E715BB6D489EDAA1D17B /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393179183F69952C0AAD480D /* ButtonStyles.swift */; };
 		A98B4D1F7DF9C00781876F29 /* TimelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039B88E709020C84538F7C1F /* TimelineView.swift */; };
 		B46FB25713D05A096E3201DC /* LetterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A05C55066F0B372A1F729D /* LetterService.swift */; };
 		C458A7E734AE540FB4471D01 /* VoiceRecorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7383B51002FB77267DC60DC /* VoiceRecorderView.swift */; };
@@ -28,13 +30,16 @@
 		E6B1F268DFAF396C117442EB /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD8960208B774AB3EB8E95A /* EmptyStateView.swift */; };
 		EB7EE7F30306DB5D90E3CCB6 /* Letter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF28E2D7D3660A012AD294B0 /* Letter.swift */; };
 		EF767954A937A23FA1204035 /* LetterListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4923ACAB6B461AC6E88283EE /* LetterListView.swift */; };
+		FCF7EBC6AB0EE5AE5084B3AE /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C5415581DB86AC7C8B07A2 /* Theme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		039B88E709020C84538F7C1F /* TimelineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineView.swift; sourceTree = "<group>"; };
+		14C5415581DB86AC7C8B07A2 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		16A05C55066F0B372A1F729D /* LetterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterService.swift; sourceTree = "<group>"; };
 		269065F7DFE710F8041FFA04 /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
 		3051DDE0172A7C2EAE810D8D /* TomorrowR11Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomorrowR11Service.swift; sourceTree = "<group>"; };
+		393179183F69952C0AAD480D /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
 		4923ACAB6B461AC6E88283EE /* LetterListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterListView.swift; sourceTree = "<group>"; };
 		58F7D88871BD94DF42D36A4F /* MemoryTagsPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryTagsPickerView.swift; sourceTree = "<group>"; };
 		663EFDFD3AADECD9EF3283C4 /* TomorrowR12Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomorrowR12Service.swift; sourceTree = "<group>"; };
@@ -47,6 +52,7 @@
 		AFD8960208B774AB3EB8E95A /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
 		B5039F7FC1DD0CE823F41DA4 /* TemplatePickerSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplatePickerSheet.swift; sourceTree = "<group>"; };
 		B866E491213A3EFDBE505C6E /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		C3937BFBCAA8D584A15ECA6C /* HapticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsManager.swift; sourceTree = "<group>"; };
 		CCC28563037F3EB4DA3A7B8C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D65B82BE707382B584F245F0 /* Tomorrow.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Tomorrow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7383B51002FB77267DC60DC /* VoiceRecorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceRecorderView.swift; sourceTree = "<group>"; };
@@ -60,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				DE6232833F4C5BA872E3A0B1 /* App */,
+				694EA4DB58226FA63FEBD933 /* DesignSystem */,
 				B76F226289F0BACA86AD5C13 /* Models */,
 				8E47C599C9D3F3F80A4CF299 /* Resources */,
 				473504822418E54F690B93FF /* Services */,
@@ -95,6 +102,16 @@
 				731E1DFA0CD489A569D43CBA /* VoiceRecorderService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		694EA4DB58226FA63FEBD933 /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+				393179183F69952C0AAD480D /* ButtonStyles.swift */,
+				C3937BFBCAA8D584A15ECA6C /* HapticsManager.swift */,
+				14C5415581DB86AC7C8B07A2 /* Theme.swift */,
+			);
+			path = DesignSystem;
 			sourceTree = "<group>";
 		};
 		7CA4383DADBC1EB5E26A5FD8 = {
@@ -224,11 +241,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				734F205DBE6669F5362B44EB /* App.swift in Sources */,
+				A595E715BB6D489EDAA1D17B /* ButtonStyles.swift in Sources */,
 				E0972895D64B32D2539E9A4D /* ContentView.swift in Sources */,
 				CA9156D5357DD6AB60170B57 /* DatabaseService.swift in Sources */,
 				E6B1F268DFAF396C117442EB /* EmptyStateView.swift in Sources */,
 				3D464BFA04FB567A36162DB1 /* FamilyArchiveView.swift in Sources */,
 				0FAE35D448DADB00FBC62751 /* FamilyTree.swift in Sources */,
+				59015D79A41144FD44A5A1DB /* HapticsManager.swift in Sources */,
 				EB7EE7F30306DB5D90E3CCB6 /* Letter.swift in Sources */,
 				DA1EB4CEC1DCA46261D7F6AC /* LetterEditorView.swift in Sources */,
 				EF767954A937A23FA1204035 /* LetterListView.swift in Sources */,
@@ -238,6 +257,7 @@
 				1F3ACE90784F2F13FDF69DFC /* MemoryTagsPickerView.swift in Sources */,
 				002840477AAEAAB299191A39 /* SettingsView.swift in Sources */,
 				558EED6133306B0A83E8CAF8 /* TemplatePickerSheet.swift in Sources */,
+				FCF7EBC6AB0EE5AE5084B3AE /* Theme.swift in Sources */,
 				A98B4D1F7DF9C00781876F29 /* TimelineView.swift in Sources */,
 				DF5AF9BE31CBE037C6A5E7E4 /* TomorrowR11Service.swift in Sources */,
 				50264EDDCA9F29AF42AA0624 /* TomorrowR12Service.swift in Sources */,

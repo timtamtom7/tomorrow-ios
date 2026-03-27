@@ -83,7 +83,6 @@ final class LibraryViewModel {
             letter.status = .delivered
             db.saveLetter(letter)
             letterService.scheduleLetterDeliveryNotification(for: letter)
-            toDeliver[i] = letter
         }
     }
     

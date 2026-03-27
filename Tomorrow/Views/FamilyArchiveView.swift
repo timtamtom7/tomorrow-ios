@@ -292,11 +292,16 @@ struct FamilyArchiveCard: View {
                 Spacer()
 
                 Button {
+                    Task { @MainActor in
+                        HapticsManager.shared.buttonTap()
+                    }
                     showingMembers = true
                 } label: {
                     Image(systemName: "person.2")
                         .foregroundStyle(.tomorrowAccent)
                 }
+                .accessibilityLabel("View family members")
+                .accessibilityHint("Opens the family members sheet")
             }
 
             // Simple family tree visualization
@@ -316,6 +321,9 @@ struct FamilyArchiveCard: View {
                 }
 
                 Button {
+                    Task { @MainActor in
+                        HapticsManager.shared.deleteAction()
+                    }
                     socialService.deleteFamilyArchive(archive.id)
                 } label: {
                     Label("Delete", systemImage: "trash")
@@ -326,6 +334,8 @@ struct FamilyArchiveCard: View {
                         .background(Color.tomorrowError.opacity(0.1))
                         .clipShape(Capsule())
                 }
+                .accessibilityLabel("Delete family archive")
+                .accessibilityHint("Permanently removes this family archive")
             }
         }
         .padding(16)

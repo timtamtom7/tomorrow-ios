@@ -70,6 +70,8 @@ struct LetterEditorView: View {
                         dismiss()
                     }
                     Color.tomorrowTextSecondary
+                    .accessibilityLabel("Cancel")
+                    .accessibilityHint("Discard changes and close editor")
                 }
             }
             .onReceive(promptTimer) { _ in
@@ -273,10 +275,15 @@ struct LetterEditorView: View {
                 )
 
             Button("Dismiss") {
+                Task { @MainActor in
+                    HapticsManager.shared.light()
+                }
                 showingPrompt = false
             }
             .font(.caption)
             Color.tomorrowTextTertiary
+            .accessibilityLabel("Dismiss prompt")
+            .accessibilityHint("Close the writing inspiration prompt")
         }
         .padding(16)
         .background(Color.tomorrowSurfaceElevated)
@@ -287,6 +294,9 @@ struct LetterEditorView: View {
 
     private var saveButton: some View {
         Button {
+            Task { @MainActor in
+                HapticsManager.shared.saveSuccess()
+            }
             saveLetter()
         } label: {
             Text(isEditing ? "Save Changes" : (isScheduled ? "Schedule Letter" : "Save as Draft"))
@@ -298,9 +308,11 @@ struct LetterEditorView: View {
                 .background(
                     canSave ? Color.tomorrowPrimary : Color.tomorrowTextTertiary
                 )
-                .clipShape(RoundedRectangle(cornerRadius: 12))
+                .clipShape(RoundedRectangle(cornerRadius: Theme.CornerRadius.md))
         }
         .disabled(!canSave)
+        .accessibilityLabel(isEditing ? "Save Changes" : (isScheduled ? "Schedule Letter" : "Save as Draft"))
+        .accessibilityHint(canSave ? "Double tap to save your letter" : "Write some content first to save")
         .padding(16)
         .background(
             LinearGradient(

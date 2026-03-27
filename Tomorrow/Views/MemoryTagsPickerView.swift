@@ -59,6 +59,9 @@ struct MemoryTagsPickerView: View {
                 HStack(spacing: 8) {
                     ForEach(letter.memoryTags) { tag in
                         MemoryTagChip(tag: tag, isSelected: true) {
+                            Task { @MainActor in
+                                HapticsManager.shared.light()
+                            }
                             letter.memoryTags.removeAll { $0.id == tag.id }
                         }
                     }
@@ -91,6 +94,9 @@ struct MemoryTagsPickerView: View {
                     ForEach(filtered) { tag in
                         let isSelected = letter.memoryTags.contains { $0.name == tag.name }
                         MemoryTagChip(tag: tag, isSelected: isSelected) {
+                            Task { @MainActor in
+                                HapticsManager.shared.toggle()
+                            }
                             if isSelected {
                                 letter.memoryTags.removeAll { $0.name == tag.name }
                             } else {

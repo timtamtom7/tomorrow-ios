@@ -76,25 +76,50 @@ struct ContentView: View {
             List {
                 Section {
                     Label("Library", systemImage: "books.vertical")
-                        .onTapGesture { selectedTab = 0 }
+                        .onTapGesture {
+                            Task { @MainActor in
+                                HapticsManager.shared.tabChange()
+                            }
+                            selectedTab = 0
+                        }
                         .listRowBackground(selectedTab == 0 ? Color.tomorrowPrimary.opacity(0.15) : Color.clear)
                     
                     Label("Timeline", systemImage: "clock")
-                        .onTapGesture { selectedTab = 1 }
+                        .onTapGesture {
+                            Task { @MainActor in
+                                HapticsManager.shared.tabChange()
+                            }
+                            selectedTab = 1
+                        }
                         .listRowBackground(selectedTab == 1 ? Color.tomorrowPrimary.opacity(0.15) : Color.clear)
                     
                     Label("Family Tree", systemImage: "tree")
-                        .onTapGesture { selectedTab = 4 }
+                        .onTapGesture {
+                            Task { @MainActor in
+                                HapticsManager.shared.tabChange()
+                            }
+                            selectedTab = 4
+                        }
                         .listRowBackground(selectedTab == 4 ? Color.tomorrowPrimary.opacity(0.15) : Color.clear)
                     
                     Label("Legacy", systemImage: "heart.fill")
-                        .onTapGesture { selectedTab = 5 }
+                        .onTapGesture {
+                            Task { @MainActor in
+                                HapticsManager.shared.tabChange()
+                            }
+                            selectedTab = 5
+                        }
                         .listRowBackground(selectedTab == 5 ? Color.tomorrowPrimary.opacity(0.15) : Color.clear)
                 }
                 
                 Section {
                     Label("Settings", systemImage: "gear")
-                        .onTapGesture { selectedTab = 3 }
+                        .onTapGesture {
+                            Task { @MainActor in
+                                HapticsManager.shared.tabChange()
+                            }
+                            selectedTab = 3
+                        }
                         .listRowBackground(selectedTab == 3 ? Color.tomorrowPrimary.opacity(0.15) : Color.clear)
                 }
             }
@@ -189,11 +214,16 @@ struct TreeNodeView: View {
                         withAnimation(.spring(response: 0.3)) {
                             isExpanded.toggle()
                         }
+                        Task { @MainActor in
+                            HapticsManager.shared.light()
+                        }
                     } label: {
                         Image(systemName: isExpanded ? "chevron.down" : "chevron.right")
                             .font(.caption)
                             .foregroundColor(Color.tomorrowPrimary)
                     }
+                    .accessibilityLabel(isExpanded ? "Collapse letter" : "Expand letter")
+                    .accessibilityHint("Double tap to \(isExpanded ? "collapse" : "expand") letter details")
                 } else {
                     Circle()
                         .fill(Color.tomorrowPrimary)

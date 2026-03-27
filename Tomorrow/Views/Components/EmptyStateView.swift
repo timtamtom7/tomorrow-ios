@@ -25,7 +25,12 @@ struct EmptyStateView: View {
                 .multilineTextAlignment(.center)
 
             if let actionTitle, let action {
-                Button(action: action) {
+                Button {
+                    Task { @MainActor in
+                        HapticsManager.shared.buttonTap()
+                    }
+                    action()
+                } label: {
                     Text(actionTitle)
                         .font(.body)
                         .fontWeight(.semibold)
@@ -35,6 +40,8 @@ struct EmptyStateView: View {
                         .background(Color.tomorrowPrimary)
                         .clipShape(Capsule())
                 }
+                .accessibilityLabel(actionTitle)
+                .accessibilityHint("Double tap to \(actionTitle.lowercased())")
                 .padding(.top, 8)
             }
         }
@@ -53,7 +60,12 @@ struct GlowButton: View {
     @State private var isPressed = false
 
     var body: some View {
-        Button(action: action) {
+        Button {
+            Task { @MainActor in
+                HapticsManager.shared.medium()
+            }
+            action()
+        } label: {
             HStack(spacing: 8) {
                 Image(systemName: icon)
                 Text(title)
@@ -84,6 +96,7 @@ struct GlowButton: View {
                 .onChanged { _ in isPressed = true }
                 .onEnded { _ in isPressed = false }
         )
+        .accessibilityLabel(title)
     }
 }
 

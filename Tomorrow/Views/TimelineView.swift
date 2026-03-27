@@ -134,12 +134,17 @@ struct TimelineNodeView: View {
 
                 if letter.content.count > 100 {
                     Button(isExpanded ? "Show less" : "Read more") {
+                        Task { @MainActor in
+                            HapticsManager.shared.light()
+                        }
                         withAnimation(.easeInOut(duration: 0.25)) {
                             isExpanded.toggle()
                         }
                     }
                     .font(.caption)
                     .foregroundStyle(Color.tomorrowPrimary)
+                    .accessibilityLabel(isExpanded ? "Show less" : "Read more")
+                    .accessibilityHint(isExpanded ? "Collapse letter content" : "Expand to read full letter")
                 }
 
                 if isPast {

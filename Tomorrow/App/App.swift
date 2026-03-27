@@ -82,13 +82,5 @@ extension ShapeStyle where Self == Color {
 }
 
 // MARK: - Font Extensions
-
-extension Font {
-    static let heading1 = Font.system(size: 28, weight: .bold)
-    static let heading2 = Font.system(size: 22, weight: .semibold)
-    static let heading3 = Font.system(size: 18, weight: .semibold)
-    static let bodyLarge = Font.system(size: 17, weight: .regular)
-    static let bodyMedium = Font.system(size: 15, weight: .regular)
-    static let caption = Font.system(size: 13, weight: .regular)
-    static let mono = Font.system(size: 14, weight: .regular, design: .monospaced)
-}
+// Fonts are now defined in DesignSystem/Theme.swift
+// Import Tomorrow.DesignSystem to use Theme.Font extensions

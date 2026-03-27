@@ -82,6 +82,13 @@ struct SettingsView: View {
                 }
                 .tint(.tomorrowPrimary)
                 .padding(16)
+                .accessibilityLabel("Delivery Reminders")
+                .accessibilityHint("When enabled, you'll be notified when letters are delivered")
+                .onChange(of: notificationsEnabled) { _, _ in
+                    Task { @MainActor in
+                        HapticsManager.shared.toggle()
+                    }
+                }
 
                 if notificationsEnabled {
                     Divider()
@@ -148,6 +155,9 @@ struct SettingsView: View {
                 Color.tomorrowTextPrimary
 
             Button(role: .destructive) {
+                Task { @MainActor in
+                    HapticsManager.shared.deleteAction()
+                }
                 // Would show confirmation
             } label: {
                 Label("Delete All Letters", systemImage: "trash")
@@ -155,12 +165,14 @@ struct SettingsView: View {
                     .frame(maxWidth: .infinity)
                     .padding(16)
                     .background(Color.tomorrowError.opacity(0.1))
-                    .clipShape(RoundedRectangle(cornerRadius: 12))
+                    .clipShape(RoundedRectangle(cornerRadius: Theme.CornerRadius.md))
                     .overlay(
-                        RoundedRectangle(cornerRadius: 12)
+                        RoundedRectangle(cornerRadius: Theme.CornerRadius.md)
                             .stroke(Color.tomorrowError.opacity(0.3), lineWidth: 1)
                     )
             }
+            .accessibilityLabel("Delete all letters")
+            .accessibilityHint("Permanently removes all your letters. Confirmation required.")
         }
     }
 }
@@ -190,9 +202,9 @@ struct StatCard: View {
         .frame(maxWidth: .infinity)
         .padding(.vertical, 16)
         .background(Color.tomorrowSurface)
-        .clipShape(RoundedRectangle(cornerRadius: 12))
+        .clipShape(RoundedRectangle(cornerRadius: Theme.CornerRadius.md))
         .overlay(
-            RoundedRectangle(cornerRadius: 12)
+            RoundedRectangle(cornerRadius: Theme.CornerRadius.md)
                 .stroke(Color.tomorrowDivider, lineWidth: 1)
         )
     }

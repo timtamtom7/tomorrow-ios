@@ -26,6 +26,9 @@ struct LibraryView: View {
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
+                        Task { @MainActor in
+                            HapticsManager.shared.buttonTap()
+                        }
                         selectedLetter = nil
                         showingEditor = true
                     } label: {
@@ -33,15 +36,22 @@ struct LibraryView: View {
                             .font(.title2)
                             .foregroundStyle(Color.tomorrowPrimary)
                     }
+                    .accessibilityLabel("Create new letter")
+                    .accessibilityHint("Opens the letter editor to write a new letter")
                 }
                 ToolbarItem(placement: .topBarLeading) {
                     Button {
+                        Task { @MainActor in
+                            HapticsManager.shared.buttonTap()
+                        }
                         showingTemplatePicker = true
                     } label: {
                         Image(systemName: "doc.text.fill")
                             .font(.body)
                     }
                     .tint(Color.tomorrowTextSecondary)
+                    .accessibilityLabel("Choose template")
+                    .accessibilityHint("Opens template picker for letter creation")
                 }
             }
             .sheet(isPresented: $showingEditor) {

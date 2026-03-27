@@ -33,6 +33,9 @@ struct LetterListView: View {
                     ForEach(letters) { letter in
                         LetterCard(letter: letter)
                             .onTapGesture {
+                                Task { @MainActor in
+                                    HapticsManager.shared.cardTap()
+                                }
                                 onLetterTap(letter)
                             }
                             .contextMenu {
@@ -89,11 +92,14 @@ struct LetterCard: View {
         }
         .padding(16)
         .background(cardBackground)
-        .clipShape(RoundedRectangle(cornerRadius: 12))
+        .clipShape(RoundedRectangle(cornerRadius: Theme.CornerRadius.md))
         .overlay(
-            RoundedRectangle(cornerRadius: 12)
+            RoundedRectangle(cornerRadius: Theme.CornerRadius.md)
                 .stroke(borderColor, lineWidth: 1)
         )
+        .accessibilityElement(children: .combine)
+        .accessibilityLabel("\(letter.displayTitle). \(letter.status.displayName). \(letter.previewText)")
+        .accessibilityHint("Double tap to open letter")
     }
 
     @ViewBuilder
