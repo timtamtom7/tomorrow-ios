@@ -13,6 +13,7 @@ enum Theme {
     static let textMuted = Color(hex: "94A3B8")
     static let divider = Color(hex: "E2E8F0")
     static let success = Color(hex: "10B981")
+    static let declined = Color(hex: "EF4444")
     static let glowAmber = Color(hex: "F59E0B")
 
     // MARK: - Gradients

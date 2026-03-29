@@ -468,7 +468,6 @@ struct CouplePlanningView: View {
             }
             .padding(Theme.spacing_lg)
             .navigationTitle("New Intention")
-            .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
                     Button("Cancel") {
@@ -565,7 +564,6 @@ struct CouplePlanningView: View {
             }
             .background(Theme.surface.ignoresSafeArea())
             .navigationTitle("Invite")
-            .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
                     Button("Done") {
@@ -751,7 +749,7 @@ struct SharedItemRow: View {
         switch status {
         case .pending: return Theme.textMuted
         case .accepted: return Theme.success
-        case .declined: return Color(hex: "EF4444")
+        case .declined: return Theme.declined
         case .completed: return Theme.success
         }
     }

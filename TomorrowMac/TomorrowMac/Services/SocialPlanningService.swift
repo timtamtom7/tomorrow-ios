@@ -153,7 +153,7 @@ struct GroupIntention: Identifiable, Codable {
 }
 
 // MARK: - SocialPlanningService
-final class SocialPlanningService {
+final class SocialPlanningService: @unchecked Sendable {
     static let shared = SocialPlanningService()
 
     private let defaults = UserDefaults.standard
@@ -335,7 +335,7 @@ final class SocialPlanningService {
             planId: planId,
             permission: permission,
             createdAt: Date(),
-            expiresAt: expiresInDays.map { Calendar.current.date(byAdding: .day, value: $0, to: Date()) }
+            expiresAt: expiresInDays.flatMap { Calendar.current.date(byAdding: .day, value: $0, to: Date()) }
         )
 
         var links = loadArray(InviteLink.self, forKey: inviteLinksKey)

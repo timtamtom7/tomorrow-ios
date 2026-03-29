@@ -13,7 +13,9 @@
 		17C3A2CCF57FF233F61CED4C /* ReflectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331B63C00672CE8F75CC8DB7 /* ReflectionView.swift */; };
 		1DEB131FA409E3E415BC0564 /* MenuBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102BE18B75479E0AB0353F6C /* MenuBarView.swift */; };
 		228736E57BEBEF1DC7CDD4C8 /* AIAnticipationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB57636EA0EB5BBB77C802A /* AIAnticipationService.swift */; };
+		3528B87F30577E8951A02130 /* SocialPlanningService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F711128585F4D0D1B4A967 /* SocialPlanningService.swift */; };
 		4CDA37FCFBC8306E24EBCBAB /* SchedulingAIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4828C3C0F52F22FD467BC0 /* SchedulingAIService.swift */; };
+		70D718DD01A94DA119C01925 /* CouplePlanningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8B2A6DCFBF46E086AD2548 /* CouplePlanningView.swift */; };
 		72B7517AE0E9D79C27D8D282 /* TomorrowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777E5F47901B1C6C5584362C /* TomorrowView.swift */; };
 		78520CE8B323EE6C9249DCB5 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B163D6533D558DBD99ADFB /* Models.swift */; };
 		9F3C1499AAA283DC72E980D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F983D9DBCB48636648095D9E /* AppDelegate.swift */; };
@@ -27,8 +29,10 @@
 		102BE18B75479E0AB0353F6C /* MenuBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarView.swift; sourceTree = "<group>"; };
 		11B163D6533D558DBD99ADFB /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		1F502B4ACF34B9C4208002A6 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		21F711128585F4D0D1B4A967 /* SocialPlanningService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialPlanningService.swift; sourceTree = "<group>"; };
 		2B14EDBC95F330F9AE602334 /* TomorrowMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TomorrowMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		331B63C00672CE8F75CC8DB7 /* ReflectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReflectionView.swift; sourceTree = "<group>"; };
+		3C8B2A6DCFBF46E086AD2548 /* CouplePlanningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouplePlanningView.swift; sourceTree = "<group>"; };
 		76372286DAE6D2B51BEDFF32 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		777E5F47901B1C6C5584362C /* TomorrowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomorrowView.swift; sourceTree = "<group>"; };
 		7BBA525B5234CF9CC76F5A64 /* MenuBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarController.swift; sourceTree = "<group>"; };
@@ -41,6 +45,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
+		1E9396E032E080D0013760F4 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				3C8B2A6DCFBF46E086AD2548 /* CouplePlanningView.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
 		33FF87843A8174EF9B333C8D /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -63,6 +75,7 @@
 				BDB57636EA0EB5BBB77C802A /* AIAnticipationService.swift */,
 				1F502B4ACF34B9C4208002A6 /* DataService.swift */,
 				8F4828C3C0F52F22FD467BC0 /* SchedulingAIService.swift */,
+				21F711128585F4D0D1B4A967 /* SocialPlanningService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -77,6 +90,7 @@
 				76372286DAE6D2B51BEDFF32 /* Theme.swift */,
 				33FF87843A8174EF9B333C8D /* Models */,
 				CFE89105C3B1884FAD637534 /* Services */,
+				1E9396E032E080D0013760F4 /* Sources */,
 				F5C80A4A576953EA64A4CA85 /* Views */,
 			);
 			path = TomorrowMac;
@@ -158,6 +172,7 @@
 			files = (
 				228736E57BEBEF1DC7CDD4C8 /* AIAnticipationService.swift in Sources */,
 				9F3C1499AAA283DC72E980D3 /* AppDelegate.swift in Sources */,
+				70D718DD01A94DA119C01925 /* CouplePlanningView.swift in Sources */,
 				CCC84E87818E12FAF976DD61 /* DataService.swift in Sources */,
 				CA573EEAF39B41EC1CEDC9F4 /* ForecastView.swift in Sources */,
 				12B6D937A9EED94AE63818B2 /* MenuBarController.swift in Sources */,
@@ -166,6 +181,7 @@
 				0C614E5EF077C13F92E5192C /* PlanningView.swift in Sources */,
 				17C3A2CCF57FF233F61CED4C /* ReflectionView.swift in Sources */,
 				4CDA37FCFBC8306E24EBCBAB /* SchedulingAIService.swift in Sources */,
+				3528B87F30577E8951A02130 /* SocialPlanningService.swift in Sources */,
 				0DC8F9460973B64919BE8A00 /* Theme.swift in Sources */,
 				72B7517AE0E9D79C27D8D282 /* TomorrowView.swift in Sources */,
 				B0CAD9796759DD0162425625 /* main.swift in Sources */,
