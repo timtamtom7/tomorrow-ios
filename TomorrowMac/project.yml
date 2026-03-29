@@ -1,0 +1,25 @@
+name: TomorrowMac
+options:
+  bundleIdPrefix: com.tommaso
+  deploymentTarget:
+    macOS: "15.0"
+targets:
+  TomorrowMac:
+    type: application
+    platform: macOS
+    sources:
+      - path: TomorrowMac
+        excludes:
+          - "*.md"
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.tommaso.tomorrow.mac
+        PRODUCT_NAME: Tomorrow
+        INFOPLIST_FILE: TomorrowMac/Info.plist
+        SWIFT_VERSION: "6.0"
+        MACOSX_DEPLOYMENT_TARGET: "15.0"
+        CODE_SIGN_IDENTITY: "-"
+        CODE_SIGN_STYLE: Manual
+        ENABLE_HARDENED_RUNTIME: YES
+        LD_RUNPATH_SEARCH_PATHS: "$(inherited) @executable_path/../Frameworks"
+        COMBINE_HIDPI_IMAGES: YES
