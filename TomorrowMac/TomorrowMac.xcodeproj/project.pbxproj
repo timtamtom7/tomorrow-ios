@@ -12,6 +12,8 @@
 		12B6D937A9EED94AE63818B2 /* MenuBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBA525B5234CF9CC76F5A64 /* MenuBarController.swift */; };
 		17C3A2CCF57FF233F61CED4C /* ReflectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331B63C00672CE8F75CC8DB7 /* ReflectionView.swift */; };
 		1DEB131FA409E3E415BC0564 /* MenuBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102BE18B75479E0AB0353F6C /* MenuBarView.swift */; };
+		228736E57BEBEF1DC7CDD4C8 /* AIAnticipationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB57636EA0EB5BBB77C802A /* AIAnticipationService.swift */; };
+		4CDA37FCFBC8306E24EBCBAB /* SchedulingAIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4828C3C0F52F22FD467BC0 /* SchedulingAIService.swift */; };
 		72B7517AE0E9D79C27D8D282 /* TomorrowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777E5F47901B1C6C5584362C /* TomorrowView.swift */; };
 		78520CE8B323EE6C9249DCB5 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B163D6533D558DBD99ADFB /* Models.swift */; };
 		9F3C1499AAA283DC72E980D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F983D9DBCB48636648095D9E /* AppDelegate.swift */; };
@@ -31,6 +33,8 @@
 		777E5F47901B1C6C5584362C /* TomorrowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomorrowView.swift; sourceTree = "<group>"; };
 		7BBA525B5234CF9CC76F5A64 /* MenuBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarController.swift; sourceTree = "<group>"; };
 		7F53A572F10E3A3CFB935A16 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		8F4828C3C0F52F22FD467BC0 /* SchedulingAIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulingAIService.swift; sourceTree = "<group>"; };
+		BDB57636EA0EB5BBB77C802A /* AIAnticipationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIAnticipationService.swift; sourceTree = "<group>"; };
 		C17405908FEF8255E522A615 /* PlanningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanningView.swift; sourceTree = "<group>"; };
 		CA8DB9E4E9F6A6CD0EC6FFBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		F983D9DBCB48636648095D9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -56,7 +60,9 @@
 		CFE89105C3B1884FAD637534 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				BDB57636EA0EB5BBB77C802A /* AIAnticipationService.swift */,
 				1F502B4ACF34B9C4208002A6 /* DataService.swift */,
+				8F4828C3C0F52F22FD467BC0 /* SchedulingAIService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -150,6 +156,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				228736E57BEBEF1DC7CDD4C8 /* AIAnticipationService.swift in Sources */,
 				9F3C1499AAA283DC72E980D3 /* AppDelegate.swift in Sources */,
 				CCC84E87818E12FAF976DD61 /* DataService.swift in Sources */,
 				CA573EEAF39B41EC1CEDC9F4 /* ForecastView.swift in Sources */,
@@ -158,6 +165,7 @@
 				78520CE8B323EE6C9249DCB5 /* Models.swift in Sources */,
 				0C614E5EF077C13F92E5192C /* PlanningView.swift in Sources */,
 				17C3A2CCF57FF233F61CED4C /* ReflectionView.swift in Sources */,
+				4CDA37FCFBC8306E24EBCBAB /* SchedulingAIService.swift in Sources */,
 				0DC8F9460973B64919BE8A00 /* Theme.swift in Sources */,
 				72B7517AE0E9D79C27D8D282 /* TomorrowView.swift in Sources */,
 				B0CAD9796759DD0162425625 /* main.swift in Sources */,
